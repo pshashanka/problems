@@ -17,3 +17,17 @@ function reverse(head) {
 
   return previous;
 }
+
+/**
+* Recursive solution
+**/
+var reverseList = function(head, previous) {
+    
+    if(!head) {
+        return previous || head;
+    }
+    
+    const temp = head.next;
+    head.next = previous;
+    return reverseList(temp, head);       
+};
