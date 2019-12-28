@@ -1,9 +1,5 @@
 function anagramMaker(str: string): string[]{
-    let map = new Map<string, number>()
-    for (const char of str) {
-        let counter = map.get(char) || 1;
-        map.set(char, counter)
-  }
+
 
   let counter = str.length;  
 
@@ -29,11 +25,7 @@ function anagramMaker(str: string): string[]{
         console.log('output', output) 
         input += char      
       }   
-
-
-        
-        return output
-
+      return output
     }
 
     const results = helper(str)
